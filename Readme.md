@@ -1,3 +1,9 @@
+<p>Source files of the practical part of my bachelor thesis focusing on LiDAR resolution simulation in synthetic
+training data for 3D object detection. More specifically a LiDAR is simulated on the Apollo Synthetic dataset (https://apollo.auto/synthetic.html) to create synthetic traning data, which can be utilized for 3D object detection.<br />
+Further a model is trained on the synthetic dataset by utilizing the OpenPCDet codebase (https://github.com/open-mmlab/OpenPCDet).
+</p>
+<br />
+<br />
 <p>generate_dataset.py:<br />
 &nbsp;&nbsp; &nbsp;- python file to generate synthetic dataset from Apollo Synthetic dataset<br />
 &nbsp;&nbsp; &nbsp;- Depth and Object_GroundTruth folders from Apollo Synthetic dataset needed, need to be in the same main folder<br />
@@ -10,11 +16,7 @@
 &nbsp;&nbsp; &nbsp;<br />
 &nbsp;&nbsp; &nbsp;<br />
 &nbsp;&nbsp; &nbsp;<br />
-get_anchor_sizes.py:<br />
-&nbsp;&nbsp; &nbsp;- python file to generate the average bounding box sizes (anchor sizes) for the classes &#39;Car&#39;, &#39;Pedestrian&#39; and &#39;Cyclist&#39;<br />
-&nbsp;&nbsp; &nbsp;- run and anchor sizes are printed out to the console</p>
 
-<p>&nbsp;</p>
 
 <p>depthImg_to_lidar_pc_with_boundingBoxes_o3d.py:<br />
 &nbsp;&nbsp; &nbsp;- python file to generate and visualize a point cloud with bounding boxes for the objects from a specific depth image with the open3d library</p>
@@ -175,4 +177,4 @@ The custom dataset needs to be prepared to fit the above structure/data preperat
 &nbsp;&nbsp; &nbsp;1.) create data infos -&gt; GoTo OpenPCDet main directory and call: python -m pcdet.datasets.kitti.custom_dataset create_kitti_infos tools/cfgs/dataset_configs/custom_dataset.yaml<br />
 &nbsp;&nbsp; &nbsp;2.) start the training process -&gt; GoTo OpenPCDet/tools and call: python train.py --cfg_file cfgs/kitti_models/pointpillar_custom.yaml</p>
 
-<p>*This project utilizes the OpenPCDet project (https://github.com/open-mmlab/OpenPCDet).</p>
+
